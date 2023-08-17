@@ -1,0 +1,13 @@
+<h2>Personajes de BDZ</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
+    </div>
+
+    <div class="col">
+        <!--El eveto (onNewCharacter) está a la escucha de las modificaciones que se hagan en el submit del forms mediante $event en "onNewCharacter($event)"-->
+        <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    </div>
+</div>

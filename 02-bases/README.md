@@ -2,6 +2,9 @@
 
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
+## Deploy link
+
+[Proyecto 02: Bases de Angular](https://glittery-malabi-4189fc.netlify.app/)
 
 ## Temas aprendidos en esta sección
 
@@ -9,10 +12,20 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 *  **Ejecutar la aplicación.** Ir al directorio donde se encuentra la aplicación desde la terminal y ejecutar el comando: `npm start`. Automáticamente se abrirá un navegador con el puerto que el `localhost` asigne.
 
-* **Componentes.** Los componentes son clases las cuales contienen la lógica, variables y bloques de etiquetas HTML que nosotros vayamos a utilizar para una cierta tarea de manera modular. Los componentes se crean ejecutando el siguiente comando: `ng g c directorio/segundo_directorio`. 
+* **Componentes.** Son los bloques fundamentales de una aplicación Angular. Representan unidades de funcionalidad reutilizable y encapsulada. Cada componente consta de una plantilla (HTML), una clase (TypeScript) que define el comportamiento y propiedades del componente, y metadatos que indican cómo se debe tratar el componente. Los componentes se utilizan para construir la interfaz de usuario y la lógica de presentación en una aplicación Angular. Los componentes se crean ejecutando el siguiente comando: `ng g c directorio/segundo_directorio`.
 
-* **ngIf.** Permite mostrar u ocultar secciones de HTML dada una condición `if`.
+* **ngIf.** Es una directiva estructural en Angular que se utiliza para condicionar la renderización de un elemento del DOM basándose en una expresión booleana. Si la expresión es verdadera, el elemento se renderiza; si es falsa, el elemento se elimina del DOM. Esto es útil para mostrar u ocultar partes de la interfaz de usuario según ciertas condiciones.
 
-* **ngFor.** Permite crear secciones de HTML dada una condición `for`.
+* **ngFor.** Es otra directiva estructural en Angular que se utiliza para iterar sobre una colección, como un arreglo, y generar elementos del DOM para cada elemento de la colección. Puedes usar `ngFor` para repetir elementos en una lista, tabla u otros elementos basados en los datos de tu componente.
 
-* **Módulos.** Es un concepto mediante el cual nosotros como desarrolladores creamos pequeños bloques de código para una solución grande. Al hacer uso de módulos podemos controlar de una mejor manera nuestra aplicación, ya que cada uno de los módulos se puede configurar y editar de manera local sin afectar a toda la aplicación.
+* **Módulos.** Son contenedores que agrupan componentes, servicios y otros artefactos relacionados en una unidad funcional. Los módulos ayudan a organizar y modularizar tu aplicación, lo que facilita la reutilización y el mantenimiento del código. El módulo raíz se llama `AppModule`, y otros módulos se pueden crear para agrupar funcionalidades específicas. Los módulos también se utilizan para importar y configurar otras bibliotecas de Angular y servicios.
+
+* **@Input().** Se utiliza para permitir la comunicación entre componentes padre e hijo. Permite que un componente padre pase datos a un componente hijo a través de propiedades de entrada. En el componente hijo, puedes usar estas propiedades de entrada como si fueran propiedades locales. Esto facilita la reutilización de componentes y la transmisión de datos desde componentes padres a componentes hijos.
+
+* **`[(ngClass)]`.** es una directiva que te permite condicionar y aplicar dinámicamente clases CSS a un elemento del DOM. La sintaxis `[()]` se llama "enlace bidireccional" y se utiliza para enlazar datos entre el componente y la vista. Al usar `[(ngClass)]`, puedes cambiar las clases de un elemento basándote en ciertas condiciones o valores en el componente. Esto es útil para cambiar el estilo visual de un elemento en función del estado de la aplicación.
+
+* **FormsModule.**  Es un módulo que proporciona directivas y funcionalidades para trabajar con formularios en la aplicación. Ofrece características como el enlace de datos bidireccional mediante ngModel, validación de formularios y manejo de eventos de formulario.
+
+* **ngModel.** Es una directiva que se utiliza para habilitar el enlace bidireccional entre un elemento de formulario HTML (como un `<input>`, `<select>` o `<textarea>`) y una propiedad en el componente. Permite mantener sincronizados los valores del formulario y las propiedades del componente en ambos sentidos, lo que facilita la interacción entre la vista y el componente.
+
+* **@Output().** Se utiliza para emitir eventos personalizados desde un componente hijo hacia su componente padre. Esto permite que el componente hijo notifique al componente padre sobre eventos o acciones que han ocurrido en su interior. El componente padre puede escuchar estos eventos utilizando la sintaxis del enlace de eventos en la plantilla `((evento)="manejadorDeEvento($event)")` y reaccionar en consecuencia.
